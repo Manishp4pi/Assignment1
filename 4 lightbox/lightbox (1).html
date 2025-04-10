@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid Gallery with Lightbox</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .gallery a {
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .gallery a:hover {
+        transform: scale(1.03);
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .lightbox:target {
+        display: flex;
+      }
+
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+      }
+
+      .close {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .close:hover {
+        color: #ff4d4d;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🌸 My Lovely Grid Gallery</h2>
+
+    <div class="gallery">
+      <a href="#img1"><img src="4.jpg" alt="Image 1" /></a>
+      <a href="#img2"><img src="2.jpg" alt="Image 2" /></a>
+      <a href="#img3"><img src="3.jpg" alt="Image 3" /></a>
+    </div>
+
+    <div id="img1" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="4.jpg" alt="Image 1 Large" />
+    </div>
+
+    <div id="img2" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="2.jpg" alt="Image 2 Large" />
+    </div>
+
+    <div id="img3" class="lightbox">
+      <a href="#" class="close">&times;</a>
+      <img src="3.jpg" alt="Image 3 Large" />
+    </div>
+  </body>
+</html>
