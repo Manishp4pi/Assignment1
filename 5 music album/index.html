@@ -3,46 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style></style>
+    <title>Music Album</title>
+    <style>
+      body {
+        background-color: #e7ebf4;
+      }
+      h1 {
+        text-align: center;
+      }
+      header {
+        background-color: #004466;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .artist {
+        position: relative;
+        border: solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 600px;
+        margin: auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px 20px;
+        cursor: pointer;
+        padding: auto;
+      }
+      .buy {
+        position: absolute;
+        top: 700px;
+      }
+    </style>
   </head>
   <body>
-    <header style="text-align: center"><h1>Music album page</h1></header>
+    <header>Music album page</header>
     <h1>Linkin Park Meteora</h1>
-    <div class="artist">
-      <ol>
-        <li>Numb</li>
-        <audio controls>
-          <source
-            src="Numb (Official Music Video) [4K UPGRADE] – Linkin Park-yt.savetube.me.mp3"
-          />
-        </audio>
-        <li>Some where i belong</li>
-        <audio controls>
-          <source
-            src="Linkin Park - Somewhere I Belong (Audio)-yt.savetube.me.mp3"
-          />
-        </audio>
-        <li>From the inside</li>
-        <audio controls>
-          <source src="10 Linkin Park - From The Inside-yt.savetube.me.mp3" />
-        </audio>
-        <li>Lying from you</li>
-        <audio controls>
-          <source
-            src="Lying From You - Linkin Park (Meteora)-yt.savetube.me.mp3"
-          />
-        </audio>
-        <li>Easier to run</li>
-        <audio controls>
-          <source
-            src="Easier To Run - Linkin Park (Meteora)-yt.savetube.me.mp3"
-          />
-        </audio>
-      </ol>
-      <a href="https://www.amazon.in/Meteora-Linkin-Park/dp/B00008H2LB"
-        >Buy This Album</a
-      >
+    <div class="container">
+      <div class="artist">
+        <img
+          src="https://i.ebayimg.com/images/g/GEEAAMXQC-tTGL2h/s-l640.jpg"
+          alt=""
+        />
+        <ol>
+          <li>Numb</li>
+          <audio controls>
+            <source
+              src="Numb (Official Music Video) [4K UPGRADE] – Linkin Park-yt.savetube.me.mp3"
+            />
+          </audio>
+          <li>Some where i belong</li>
+          <audio controls>
+            <source
+              src="Linkin Park - Somewhere I Belong (Audio)-yt.savetube.me.mp3"
+            />
+          </audio>
+          <li>From the inside</li>
+          <audio controls>
+            <source src="10 Linkin Park - From The Inside-yt.savetube.me.mp3" />
+          </audio>
+          <li>Lying from you</li>
+          <audio controls>
+            <source
+              src="Lying From You - Linkin Park (Meteora)-yt.savetube.me.mp3"
+            />
+          </audio>
+          <li>Easier to run</li>
+          <audio controls>
+            <source
+              src="Easier To Run - Linkin Park (Meteora)-yt.savetube.me.mp3"
+            />
+          </audio>
+        </ol>
+        <div class="Buy">
+          <a href="https://www.amazon.in/Meteora-Linkin-Park/dp/B00008H2LB"
+            >Buy This Album</a
+          >
+        </div>
+      </div>
     </div>
   </body>
 </html>
