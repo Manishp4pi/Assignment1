@@ -2,118 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>FAQ Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-      body {
-        font-family: "Segoe UI", sans-serif;
-        margin: 0;
-        padding: 20px;
-        background: #f4f4f4;
-        color: #333;
-      }
-
       header {
+        font-size: 50px;
         background-color: #004466;
         color: white;
         padding: 20px;
         text-align: center;
+        margin-bottom: 50px;
       }
-
-      h1 {
-        margin: 0;
+      body {
+        background-color: #e7ebf4;
       }
-
-      dl {
-        border: solid;
+      .faq {
         max-width: 600px;
-        margin: 40px auto;
-        background: white;
-        padding: 20px;
+        margin: auto;
+        background-color: #fff;
         border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      dt {
-        font-weight: bold;
+        padding: 30px 20px;
         cursor: pointer;
-        margin: 15px 0 5px;
-        position: relative;
+        padding: auto;
       }
-
-      dt::after {
-        content: "+";
-        position: absolute;
-        right: 0;
-        font-size: 18px;
-        transition: transform 0.3s;
-      }
-
-      dt.active::after {
-        content: "-";
-      }
-
-      dd {
-        margin: 0 0 15px;
-        padding-left: 10px;
-        display: none;
-        line-height: 1.5;
+      summary {
+        background-color: #e7ebf4;
+        padding: 20px 30px;
+        border-radius: 10px;
+        margin: 15px 0px;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Frequentely asked Question</h1>
-    </header>
-
-    <dl>
-      <dt>What is your return policy?</dt>
-      <dd>
-        You can return any product within 30 days of purchase for a full refund.
-      </dd>
-
-      <dt>How long does shipping take?</dt>
-      <dd>Shipping typically takes 3-5 business days for domestic orders.</dd>
-
-      <dt>Do you offer international shipping?</dt>
-      <dd>
-        Yes! We ship to over 50 countries worldwide with international shipping
-        options.
-      </dd>
-
-      <dt>How can I contact customer support?</dt>
-      <dd>
-        You can email us at support@example.com or call us at 1-800-123-4567.
-      </dd>
-
-      <dt>Where are you located?</dt>
-      <dd>
-        Our main office is located in New York City, but we operate worldwide.
-      </dd>
-    </dl>
-
-    <script>
-      const questions = document.querySelectorAll("dt");
-
-      questions.forEach((question) => {
-        question.addEventListener("click", () => {
-          const answer = question.nextElementSibling;
-          const isOpen = question.classList.contains("active");
-
-          // Close all answers
-          document
-            .querySelectorAll("dd")
-            .forEach((dd) => (dd.style.display = "none"));
-          document
-            .querySelectorAll("dt")
-            .forEach((dt) => dt.classList.remove("active"));
-
-          // Toggle current answer
-          if (!isOpen) {
-            answer.style.display = "block";
-            question.classList.add("active");
-          }
-        });
-      });
-    </script>
+    <header>Frequentely Asked Question</header>
+    <div class="faq">
+      <details>
+        <summary>Frequentely Asked Question 1?</summary>
+        <dl>
+          <dt>What is your return policy?</dt>
+          <dd>
+            You can return any product within 30 days of purchase for a full
+            refund.
+          </dd>
+        </dl>
+      </details>
+      <details>
+        <summary>Frequentely Asked Question 2?</summary>
+        <dl>
+          <dt>How long does shipping take?</dt>
+          <dd>
+            Shipping typically takes 3-5 business days for domestic orders.
+          </dd>
+        </dl>
+      </details>
+      <details>
+        <summary>Frequentely Asked Question 3?</summary>
+        <dl>
+          <dt>Do you offer international shipping?</dt>
+          <dd>
+            Yes! We ship to over 50 countries worldwide with international
+            shipping options.
+          </dd>
+        </dl>
+      </details>
+      <details>
+        <summary>Frequentely Asked Question 4?</summary>
+        <dl>
+          <dt>How can I contact customer support?</dt>
+          <dd>
+            You can email us at support@example.com or call us at
+            1-800-123-4567.
+          </dd>
+        </dl>
+      </details>
+      <details>
+        <summary>Frequentely Asked Question 5?</summary>
+        <dl>
+          <dt>Where are you located?</dt>
+          <dd>
+            Our main office is located in New York City, but we operate
+            worldwide.
+          </dd>
+        </dl>
+      </details>
+    </div>
   </body>
 </html>
